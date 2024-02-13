@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower</title>
+    <style>
+        QGltcG9ydCB1cmwoImh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Nb250c2VycmF0K0FsdGVybmF0ZXMiKTsKaHRtbCB7CiAgaGVpZ2h0OiAyMDB2aDsKICBiYWNrZ3JvdW5kOiByYWRpYWwtZ3JhZGllbnQoZWxsaXBzZSBhdCBjZW50ZXIsICNkYmI4MDAgMCUsICM2ODhhY2MgNTAlKTsKICBjdXJzb3I6IHBvaW50ZXI7Cn0KCmJvZHkgewogIGhlaWdodDogMTAwdmg7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKICBib3JkZXItYm90dG9tOiAxMHZoICMzMzk1NDUgc29saWQ7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICBwb3NpdGlvbjogcmVsYXRpdmU7Cn0KCmgxIHsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgY29sb3I6IHdoaXRlOwogIGZvbnQtZmFtaWx5OiAiTW9udHNlcnJhdCBBbHRlcm5hdGVzIiwgc2Fucy1zZXJpZjsKICBmb250LXNpemU6IDQwcHg7CiAgcG9zaXRpb246IGFic29sdXRlOwogIHotaW5kZXg6IDE7CiAgd2lkdGg6IDEwMCU7CiAgdG9wOiAwdmg7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCwgMTAwdmgpOwogIGFuaW1hdGlvbjogbW92ZSAxcyAyLjVzIGZvcndhcmRzOwp9CgpAa2V5ZnJhbWVzIG1vdmUgewogIDAlIHsKICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDAsIDEwMHZoKTsKICB9CiAgMTAwJSB7CiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgwdmgsIDApOwogIH0KfQouc3VuZmx3ciB7CiAgd2lkdGg6IDgwdm1pbjsKICBoZWlnaHQ6IDgwdm1pbjsKICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgYm90dG9tOiAwOwogIGxlZnQ6IDUwJTsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAwJSk7Cn0KLnN1bmZsd3JfX2xlYWYtLWxlZnQsIC5zdW5mbHdyX19sZWFmLS1yaWdodCB7CiAgd2lkdGg6IDAlOwogIGhlaWdodDogMjAlOwogIGJvcmRlci1yYWRpdXM6IDAlIDUwJSAwJSA1MCU7CiAgcG9zaXRpb246IGFic29sdXRlOwogIGJhY2tncm91bmQ6ICM2ZjhlNGI7CiAgdG9wOiA3MCU7CiAgbGVmdDogNDUlOwogIHRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKSByb3RhdGUoLTIwZGVnKTsKICBhbmltYXRpb246IHN1bmZsd3JfX2xlYWYgZm9yd2FyZHMgMXMgMC41czsKfQouc3VuZmx3cl9fbGVhZi0tcmlnaHQgewogIHRvcDogODAlOwogIGxlZnQ6IDU1JTsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgwJSwgLTUwJSkgcm90YXRlKC03MGRlZyk7Cn0KQGtleWZyYW1lcyBzdW5mbHdyX19sZWFmIHsKICAwJSB7CiAgICB3aWR0aDogMCU7CiAgICBib3JkZXI6IDBweCBzb2xpZCBibGFjazsKICB9CiAgMTAwJSB7CiAgICB3aWR0aDogMjAlOwogICAgYm9yZGVyOiAycHggc29saWQgYmxhY2s7CiAgfQp9Ci5zdW5mbHdyX19zdGVtIHsKICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgMCUpOwogIHdpZHRoOiA1JTsKICBoZWlnaHQ6IDYwJTsKICBiYWNrZ3JvdW5kOiAjNTU2ZDM5OwogIGxlZnQ6IDUwJTsKICBib3R0b206IDAlOwogIGJvcmRlcjogMnB4IHNvbGlkIGJsYWNrOwogIGFuaW1hdGlvbjogc3VuZmx3cl9fc3RlbSBmb3J3YXJkcyAxczsKfQpAa2V5ZnJhbWVzIHN1bmZsd3JfX3N0ZW0gewogIDAlIHsKICAgIGhlaWdodDogMDsKICB9CiAgMTAwJSB7CiAgICBoZWlnaHQ6IDYwJTsKICB9Cn0KLnN1bmZsd3JfX2NlbnRlciB7CiAgYm9yZGVyLXJhZGl1czogNTAlOwogIGJhY2tncm91bmQtY29sb3I6ICMzYzFmMDM7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7CiAgcG9zaXRpb246IGFic29sdXRlOwogIGxlZnQ6IDUwJTsKICB0b3A6IDQwJTsKICB6LWluZGV4OiAyOwogIGFuaW1hdGlvbjogc3VuZmx3cl9fY2VudGVyIDFzIDFzIGZvcndhcmRzOwp9CkBrZXlmcmFtZXMgc3VuZmx3cl9fY2VudGVyIHsKICAwJSB7CiAgICB3aWR0aDogMCU7CiAgICBoZWlnaHQ6IDAlOwogIH0KICAxMDAlIHsKICAgIHdpZHRoOiAyNSU7CiAgICBoZWlnaHQ6IDI1JTsKICB9Cn0KLnN1bmZsd3JfX3BlZGFsLS0xLCAuc3VuZmx3cl9fcGVkYWwtLTcsIC5zdW5mbHdyX19wZWRhbC0tMTIsIC5zdW5mbHdyX19wZWRhbC0tMTEsIC5zdW5mbHdyX19wZWRhbC0tMTAsIC5zdW5mbHdyX19wZWRhbC0tOSwgLnN1bmZsd3JfX3BlZGFsLS04LCAuc3VuZmx3cl9fcGVkYWwtLTYsIC5zdW5mbHdyX19wZWRhbC0tNSwgLnN1bmZsd3JfX3BlZGFsLS00LCAuc3VuZmx3cl9fcGVkYWwtLTMsIC5zdW5mbHdyX19wZWRhbC0tMiB7CiAgYm9yZGVyLXJhZGl1czogNTAlOwogIGJhY2tncm91bmQ6ICNmMmZlMDA7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7CiAgcG9zaXRpb246IGFic29sdXRlOwogIGxlZnQ6IDUwJTsKICB0b3A6IDQwJTsKICBhbmltYXRpb246IGdyb3ctcGVkYWwtYmFjayAxcyAxLjVzIGZvcndhcmRzOwp9Ci5zdW5mbHdyX19wZWRhbC0tMiB7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSkgcm90YXRlKDMwZGVnKTsKfQouc3VuZmx3cl9fcGVkYWwtLTMgewogIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpIHJvdGF0ZSg2MGRlZyk7Cn0KLnN1bmZsd3JfX3BlZGFsLS00IHsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKSByb3RhdGUoOTBkZWcpOwp9Ci5zdW5mbHdyX19wZWRhbC0tNSB7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSkgcm90YXRlKDEyMGRlZyk7Cn0KLnN1bmZsd3JfX3BlZGFsLS02IHsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKSByb3RhdGUoMTUwZGVnKTsKfQpAa2V5ZnJhbWVzIGdyb3ctcGVkYWwtYmFjayB7CiAgMCUgewogICAgd2lkdGg6IDAlOwogICAgaGVpZ2h0OiAwJTsKICAgIGJvcmRlcjogMHB4IHNvbGlkIGJsYWNrOwogIH0KICAxMDAlIHsKICAgIHdpZHRoOiAxNSU7CiAgICBoZWlnaHQ6IDQ1JTsKICAgIGJvcmRlcjogMnB4IHNvbGlkIGJsYWNrOwogIH0KfQouc3VuZmx3cl9fcGVkYWwtLTcsIC5zdW5mbHdyX19wZWRhbC0tMTIsIC5zdW5mbHdyX19wZWRhbC0tMTEsIC5zdW5mbHdyX19wZWRhbC0tMTAsIC5zdW5mbHdyX19wZWRhbC0tOSwgLnN1bmZsd3JfX3BlZGFsLS04IHsKICBib3JkZXItcmFkaXVzOiAyMCUgNTAlIDIwJSA1MCU7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSkgcm90YXRlKDE1ZGVnKTsKICBhbmltYXRpb246IGdyb3ctcGVkYWwtZnJvbnQgMXMgMnMgZm9yd2FyZHM7Cn0KLnN1bmZsd3JfX3BlZGFsLS04IHsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKSByb3RhdGUoNDVkZWcpOwp9Ci5zdW5mbHdyX19wZWRhbC0tOSB7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSkgcm90YXRlKDc1ZGVnKTsKfQouc3VuZmx3cl9fcGVkYWwtLTEwIHsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKSByb3RhdGUoMTA1ZGVnKTsKfQouc3VuZmx3cl9fcGVkYWwtLTExIHsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKSByb3RhdGUoMTM1ZGVnKTsKfQouc3VuZmx3cl9fcGVkYWwtLTEyIHsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKSByb3RhdGUoMTY1ZGVnKTsKfQpAa2V5ZnJhbWVzIGdyb3ctcGVkYWwtZnJvbnQgewogIDAlIHsKICAgIGhlaWdodDogMCU7CiAgICB3aWR0aDogMCU7CiAgICBib3JkZXI6IDBweCBzb2xpZCBibGFjazsKICB9CiAgMTAwJSB7CiAgICBoZWlnaHQ6IDM1JTsKICAgIHdpZHRoOiAxMCU7CiAgICBib3JkZXI6IDJweCBzb2xpZCBibGFjazsKICB9Cn0vKiMgc291cmNlTWFwcGluZ1VSTD1zdHlsZS5jc3MubWFwICov        /* Use online tools to convert your style.css to base64 */
+        html {
+            height: 200vh;
+            background: radial-gradient(ellipse at center, #0c0c0c 0%, #688acc 50%);
+            cursor: pointer;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            border-bottom: 10vh #339545 solid;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(228, 37, 37);
+            font-family: "Montserrat Alternates", sans-serif;
+            font-size: 35px;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            top: 0vh;
+            transform: translate(0, 100vh);
+            animation: move 1s 2.5s forwards;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 100vh);
+            }
+            100% {
+                transform: translate(0vh, 0);
+            }
+        }
+
+        .sunflwr {
+            width: 80vmin;
+            height: 80vmin;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .sunflwr__leaf--left,
+        .sunflwr__leaf--right {
+            width: 0%;
+            height: 20%;
+            border-radius: 0% 50% 0% 50%;
+            position: absolute;
+            background: #6f8e4b;
+            top: 70%;
+            left: 45%;
+            transform: translate(-100%, -50%) rotate(-20deg);
+            animation: sunflwr__leaf forwards 1s 0.5s;
+        }
+
+        .sunflwr__leaf--right {
+            top: 80%;
+            left: 55%;
+            transform: translate(0%, -50%) rotate(-70deg);
+        }
+
+        @keyframes sunflwr__leaf {
+            0% {
+                width: 0%;
+                border: 0px solid black;
+            }
+            100% {
+                width: 20%;
+                border: 2px solid black;
+            }
+        }
+
+        .sunflwr__stem {
+            position: absolute;
+            transform: translate(-50%, 0%);
+            width: 5%;
+            height: 60%;
+            background: #556d39;
+            left: 50%;
+            bottom: 0%;
+            border: 2px solid black;
+            animation: sunflwr__stem forwards 1s;
+        }
+
+        @keyframes sunflwr__stem {
+            0% {
+                height: 0;
+            }
+            100% {
+                height: 60%;
+            }
+        }
+
+        .sunflwr__center {
+            border-radius: 50%;
+            background-color: #3b0707;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            z-index: 2;
+            animation: sunflwr__center 1s 1s forwards;
+        }
+
+        @keyframes sunflwr__center {
+            0% {
+                width: 0%;
+                height: 0%;
+            }
+            100% {
+                width: 15%;
+                height: 15%;
+            }
+        }
+
+        .sunflwr__pedal--1,
+        .sunflwr__pedal--7,
+        .sunflwr__pedal--12,
+        .sunflwr__pedal--11,
+        .sunflwr__pedal--10,
+        .sunflwr__pedal--9,
+        .sunflwr__pedal--8,
+        .sunflwr__pedal--6,
+        .sunflwr__pedal--5,
+        .sunflwr__pedal--4,
+        .sunflwr__pedal--3,
+        .sunflwr__pedal--2 {
+            border-radius: 50%;
+            background: #fe0000;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            animation: grow-pedal-back 1s 1.5s forwards;
+        }
+
+        .sunflwr__pedal--2 {
+            transform: translate(-50%, -50%) rotate(30deg);
+        }
+
+        .sunflwr__pedal--3 {
+            transform: translate(-50%, -50%) rotate(60deg);
+        }
+
+        .sunflwr__pedal--4 {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        .sunflwr__pedal--5 {
+            transform: translate(-50%, -50%) rotate(120deg);
+        }
+
+        .sunflwr__pedal--6 {
+            transform: translate(-50%, -50%) rotate(150deg);
+        }
+
+        @keyframes grow-pedal-back {
+            0% {
+                width: 0%;
+                height: 0%;
+                border: 0px solid black;
+            }
+            100% {
+                width: 15%;
+                height: 45%;
+                border: 2px solid black;
+            }
+        }
+
+        .sunflwr__pedal--7,
+        .sunflwr__pedal--12,
+        .sunflwr__pedal--11,
+        .sunflwr__pedal--10,
+        .sunflwr__pedal--9,
+        .sunflwr__pedal--8 {
+            border-radius: 20% 50% 20% 50%;
+            transform: translate(-50%, -50%) rotate(15deg);
+            animation: grow-pedal-front 1s 2s forwards;
+        }
+
+        .sunflwr__pedal--8 {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .sunflwr__pedal--9 {
+            transform: translate(-50%, -50%) rotate(75deg);
+        }
+
+        .sunflwr__pedal--10 {
+            transform: translate(-50%, -50%) rotate(105deg);
+        }
+
+        .sunflwr__pedal--11 {
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+
+        .sunflwr__pedal--12 {
+            transform: translate(-50%, -50%) rotate(165deg);
+        }
+
+        @keyframes grow-pedal-front {
+            0% {
+                height: 0%;
+                width: 0%;
+                border: 0px solid black;
+            }
+            100% {
+                height: 35%;
+                width: 10%;
+                border: 2px solid black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day, Jaan<br><small>(click me)</small></h1>
+    <div class="sunflwr">
+        <div class="sunflwr__leaf--left"></div>
+        <div class="sunflwr__leaf--right"></div>
+        <div class="sunflwr__stem"></div>
+        <div class="sunflwr__center"></div>
+        <div class="sunflwr__pedal--1"></div>
+        <div class="sunflwr__pedal--2"></div>
+        <div class="sunflwr__pedal--3"></div>
+        <div class="sunflwr__pedal--4"></div>
+        <div class="sunflwr__pedal--5"></div>
+        <div class="sunflwr__pedal--6"></div>
+        <div class="sunflwr__pedal--7"></div>
+        <div class="sunflwr__pedal--8"></div>
+        <div class="sunflwr__pedal--9"></div>
+        <div class="sunflwr__pedal--10"></div>
+        <div class="sunflwr__pedal--11"></div>
+        <div class="sunflwr__pedal--12"></div>
+    </div>
+    <script>
+        // Paste your JavaScript code here
+        (function() {
+    const numOfFlowers = 4;
+    const growGarden = () => {
+      function getRandomArbitrary(min, max) {
+        return Math.round(Math.random() * (max - min)) + min;
+      }
+  
+      let positions = [];
+  
+      function getNum(){
+        let pos = getRandomArbitrary(0, 100);
+        for(let x = 0; x < positions.length; x++){
+          if(pos > positions[x] - 3 && pos < positions[x] + 3){
+            return false;
+          }
+        }
+        positions.push(pos);
+      }
+  
+      while(positions.length < numOfFlowers){
+        getNum();
+      }
+  
+      let more = setInterval(function() {
+        let flwr = document.createElement('div');
+        let dim = getRandomArbitrary(30, 80);
+        let leftPos = positions[0];
+        positions.shift();
+  
+        flwr.classList.add('sunflwr');
+        flwr.innerHTML = `<div class="sunflwr__leaf--left"></div>
+                          <div class="sunflwr__leaf--right"></div>
+                          <div class="sunflwr__stem"></div>
+                          <div class="sunflwr__center"></div>
+                          <div class="sunflwr__pedal--1"></div>
+                          <div class="sunflwr__pedal--2"></div>
+                          <div class="sunflwr__pedal--3"></div>
+                          <div class="sunflwr__pedal--4"></div>
+                          <div class="sunflwr__pedal--5"></div>
+                          <div class="sunflwr__pedal--6"></div>
+                          <div class="sunflwr__pedal--7"></div>
+                          <div class="sunflwr__pedal--8"></div>
+                          <div class="sunflwr__pedal--9"></div>
+                          <div class="sunflwr__pedal--10"></div>
+                          <div class="sunflwr__pedal--11"></div>
+                          <div class="sunflwr__pedal--12"></div>`;
+        flwr.style.left = `${leftPos}vw`;
+        flwr.style.height = `${dim}vmin`;
+        flwr.style.width = `${dim}vmin`;
+        flwr.style.zIndex = 100 - dim;
+        flwr.style.filter = `saturate(${getRandomArbitrary(70, 100)}%) brightness(${getRandomArbitrary(80, 150)}%)`;
+        document.querySelector('body').appendChild(flwr);
+      }, 150);
+  
+      setTimeout(function() {
+        window.clearInterval(more);
+      }, numOfFlowers * 150);
+    }
+    
+    document.body.addEventListener('click', () => {
+      growGarden();
+    });
+  })();
+        (function() {
+            const numOfFlowers = 4;
+            const growGarden = () => {
+                function getRandomArbitrary(min, max) {
+                    return Math.round(Math.random() * (max - min)) + min;
+                }
+
+                let positions = [];
+
+                function getNum() {
+                    let pos = getRandomArbitrary(0, 100);
+                    for (let x = 0; x < positions.length; x++) {
+                        if (pos > positions[x] - 3 && pos < positions[x] + 3) {
+                            return false;
+                        }
+                    }
+                    positions.push(pos);
+                }
+
+                while (positions.length < numOfFlowers) {
+                    getNum();
+                }
+
+                let more = setInterval(function () {
+                    let flwr = document.createElement('div');
+                    let dim = getRandomArbitrary(30, 80);
+                    let leftPos = positions[0];
+                    positions.shift();
+
+                    flwr.classList.add('sunflwr');
+                    flwr.innerHTML = `<div class="sunflwr__leaf--left"></div>
+                                  <div class="sunflwr__leaf--right"></div>
+                                  <div class="sunflwr__stem"></div>
+                                  <div class="sunflwr__center"></div>
+                                  <div class="sunflwr__pedal--1"></div>
+                                  <div class="sunflwr__pedal--2"></div>
+                                  <div class="sunflwr__pedal--3"></div>
+                                  <div class="sunflwr__pedal--4"></div>
+                                  <div class="sunflwr__pedal--5"></div>
+                                  <div class="sunflwr__pedal--6"></div>
+                                  <div class="sunflwr__pedal--7"></div>
+                                  <div class="sunflwr__pedal--8"></div>
+                                  <div class="sunflwr__pedal--9"></div>
+                                  <div class="sunflwr__pedal--10"></div>
+                                  <div class="sunflwr__pedal--11"></div>
+                                  <div class="sunflwr__pedal--12"></div>`;
+                    flwr.style.left = `${leftPos}vw`;
+                    flwr.style.height = `${dim}vmin`;
+                    flwr.style.width = `${dim}vmin`;
+                    flwr.style.zIndex = 100 - dim;
+                    flwr.style.filter = `saturate(${getRandomArbitrary(70, 100)}%) brightness(${getRandomArbitrary(80, 150)}%)`;
+                    document.querySelector('body').appendChild(flwr);
+                }, 150);
+
+                setTimeout(function () {
+                    window.clearInterval(more);
+                }, numOfFlowers * 150);
+            }
+
+            document.body.addEventListener('click', () => {
+                growGarden();
+            });
+        })();
+    </script>
+</body>
+</html>
